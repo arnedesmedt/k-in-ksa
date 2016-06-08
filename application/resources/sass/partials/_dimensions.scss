@@ -1,0 +1,35 @@
+$default-size: 15px;
+
+$frame-width: 1280px;
+$frame-height: 768px;
+
+$frame-border: 20px;
+
+$menu-height: 100px;
+$menu-item-height: 40px;
+$menu-margin: 18px;
+$menu-padding: 10px;
+$logo-width: 260px + (2 * $default-size);
+$logo-nzg-width: 160px + (2 * $default-size);
+
+$tower-img-width: 650px;
+$tower-img-height: 630px;
+$tower-width-percentage: (280/500);
+$tower-height-percentage: (424/484);
+$tower-width-side-percentage: (1/5);
+
+$overview-width: $frame-width - 250;
+$overview-height: 520px;
+$overview-pull-width: 35px;
+
+$floor-height: 120px;
+$floor-margin: 15px;
+
+$floor-row-height: 15px;
+$floor-row-padding: 10px;
+
+$overview-container-width: $overview-width - $overview-pull-width;
+$overview-container-inner-width: $overview-container-width - (2*$floor-row-padding);
+
+$popover-height: $overview-height - 100;
+$margin-popover: 40px;

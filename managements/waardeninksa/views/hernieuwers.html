@@ -1,0 +1,73 @@
+{% extends "@application/info.html" %}
+
+{% block infocontent %}
+	<h2>Hernieuwers +16 jaar</h2>
+	<h4>De kernwoorden volgens de leeftijdsbalk</h4>
+	<div class="table-container">
+	<table class="col-3 kernwoorden-leeftijd">
+		<tr>
+			<td>
+				Houding t.o.v. leefwereld
+			</td>
+			<td>
+				PLANNEN EN KEUZES MAKEN
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Interesse
+			</td>
+			<td>
+				INSPRAAK
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Motivatie voor KSA
+			</td>
+			<td>
+				GROEP
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Groeien in initiatief
+			</td>
+			<td>
+				ENGAGEMENT
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Identiteitsontwikkeling
+			</td>
+			<td>
+				EIGEN IDENTITEIT OPBOUWEN
+			</td>
+		</tr>
+	</table>
+</div>
+	<p>
+		Gaandeweg hebben de Hernieuwers zich een mening gevormd. Ze weten wie ze zijn en wat ze belangrijk vinden. Dit alles willen ze zoveel mogelijk delen met anderen. Meer en meer groeit het verlangen om het engagement op te nemen om de waarden door te geven.
+	</p>
+	<p>
+		Door de waarden ook in de praktijk te brengen, wil men het goede voorbeeld geven.
+	</p>
+	<h4>Kernwoorden rond de K</h4>
+	<div class="table-container">
+	<table class="col-3 kernwoorden-k">
+		<tr>
+			<td>WAARDEN DOORGEVEN</td>
+			<td>ACTIE </td>
+			<td>IDENTITEIT</td>
+		</tr>
+	</table>
+	</div>
+	<h4>Methodieken en tips</h4>
+	<ul>
+	{% for method in methods %}
+	<li>{{method.name}}{% if method.file %} <a href="{{method.file}}">BIJLAGE</a>{% endif %}</li>
+	{% endfor %}
+	</ul>
+    
+{% endblock infocontent %}

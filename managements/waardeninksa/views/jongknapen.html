@@ -1,0 +1,73 @@
+{% extends "@application/info.html" %}
+
+{% block infocontent %}
+	<h2>Jongknapen 10-12 jaar</h2>
+	<h4>De kernwoorden volgens de leeftijdsbalk</h4>
+	<div class="table-container">
+	<table class="col-3 kernwoorden-leeftijd">
+		<tr>
+			<td>
+				Houding t.o.v. leefwereld
+			</td>
+			<td>
+				uitdagingen zoeken
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Interesse
+			</td>
+			<td>
+				competitie
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Motivatie voor KSA
+			</td>
+			<td>
+				actie en spanning
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Groeien in initiatief
+			</td>
+			<td>
+				initiatief nemen
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Identiteitsontwikkeling
+			</td>
+			<td>
+				voorbeelden
+			</td>
+		</tr>
+	</table>
+</div>
+	<p>
+		Net zoals bij de Pagadders leren Jongknapen ook nog veel van elkaar. Door samen te spelen leren ze goed met elkaar opschieten, proberen ze opdrachten tot een goed einde te brengen. De minder aangename dingen zoals vals spelen, liegen, ruzie maken …  komen ook tot uiting tijdens het spel. 
+	</p>
+	<p>
+		De Jongknapen zijn wel al meer in staat om na te denken over wat ze belangrijk vinden voor zichzelf, voor de anderen en voor de KSA-bond. Door stil te staan bij de betekenis van de waarden worden ze uitgedaagd om er ook naar te handelen.
+	</p>
+	<h4>Kernwoorden rond de K</h4>
+	<div class="table-container">
+	<table class="col-3 kernwoorden-k">
+		<tr>
+			<td>NADENKEN </td>
+			<td>ACTIE</td>
+			<td>VERHALEND KADER</td>
+		</tr>
+	</table>
+	</div>
+	<h4>Methodieken en tips</h4>
+	<ul>
+	{% for method in methods %}
+	<li>{{method.name}}{% if method.file %} <a href="{{method.file}}">BIJLAGE</a>{% endif %}</li>
+	{% endfor %}
+	</ul>
+    
+{% endblock infocontent %}

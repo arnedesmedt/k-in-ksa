@@ -1,0 +1,65 @@
+.background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+
+	& > div {
+		height: 50%;
+	}
+
+	.sky {
+		@include background-image(linear-gradient(to bottom right, $sky-top, $sky-bottom));
+	}
+
+	.ground {
+		@include background-image(linear-gradient(to bottom right, $ground-top, $ground-bottom));
+	}
+}
+
+.content-wrapper.home {
+
+	position: absolute;
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+
+	#tower-wrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		#tower {
+			position: relative;
+			width: $tower-img-width;
+			height: $tower-img-height;
+			margin-left: ($frame-width - ($tower-img-width*$tower-width-percentage))/2;
+			margin-top: (($frame-height - ($tower-img-height*$tower-height-percentage))/2) + 25px;
+		}
+	}
+
+	.popover-container {
+		position: absolute;
+		height: $popover-height;
+		width: (($frame-width - ($tower-img-width * $tower-width-percentage)) / 2) - ($margin-popover * 2);
+		margin-top: ($frame-height - $popover-height)/2;
+		margin-left: $margin-popover;
+		
+		background-color: $popover-background;
+		padding: $default-size;
+		color: white;
+		z-index: 10;
+
+		.popover-scroll {
+			width: 100%;
+			height: 100%;
+			overflow-y: scroll;
+			padding: $default-size;
+		}
+	}
+}
+

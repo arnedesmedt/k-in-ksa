@@ -1,0 +1,79 @@
+{% extends "@application/info.html" %}
+
+{% block infocontent %}
+	<h2>Knapen 12-14 jaar</h2>
+	<h4>De kernwoorden volgens de leeftijdsbalk</h4>
+	<div class="table-container">
+	<table class="col-3 kernwoorden-leeftijd">
+		<tr>
+			<td>
+				Houding t.o.v. leefwereld
+			</td>
+			<td>
+				EXPERIMENTEREN
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Interesse
+			</td>
+			<td>
+				VRIJHEID EN AVONTUUR
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Motivatie voor KSA
+			</td>
+			<td>
+				VERKENNEN
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Groeien in initiatief
+			</td>
+			<td>
+				ZELFSTANDIGHEID
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Identiteitsontwikkeling
+			</td>
+			<td>
+				ZICHZELF EN DE GROEP ONTDEKKEN
+			</td>
+		</tr>
+	</table>
+</div>
+	<p>
+		In het nadenken en spreken over geloof is het belangrijk dat de Knapen leren dat geloven op zich niet gemakkelijk is. Er zijn ontzettend veel vragen maar ook veel antwoorden. En net daar knelt soms het schoentje. Knapen wensen de duidelijkheid die ze niet kunnen krijgen.
+	</p>
+	<p>
+		De vragen die ze hebben rond een Bijbelverhaal kunnen wel beantwoord worden. Dit veronderstelt natuurlijk dat we zelf vertrouwd zijn met de betekenis van het verhaal. De Knapen zijn ook al gevoeliger voor symbolische taal waardoor ze ook beter begrijpen dat we niet alles letterlijk moeten nemen.
+	</p>
+	<p>
+		Aan de hand van een gesprek rond geloof (eventueel vanuit een Bijbelverhaal) probeert men stilaan te verwoorden wat men zelf wil geloven. In de vriendengroep zou er in principe voldoende openheid moeten zijn om dit delicate en persoonlijke onderwerp ter sprake te brengen.
+	</p>
+	<p>
+		In een viering brengen we samen wat we belangrijk vinden en duiden we dit vanuit christelijk perspectief. Bij Knapen is het ook mogelijk om te vertrekken vanuit een Bijbelverhaal, luisterlied of tekst om van daaruit te komen tot bezinning en gebed.
+	</p>
+	<h4>Kernwoorden rond de K</h4>
+	<div class="table-container">
+	<table class="col-3 kernwoorden-k">
+		<tr>
+			<td>+/- symbolisch geloof</td>
+			<td>bijbelverhaal duiden</td>
+			<td>samen vieren</td>
+		</tr>
+	</table>
+	</div>
+	<h4>Methodieken en tips</h4>
+	<ul>
+	{% for method in methods %}
+	<li>{{method.name}}{% if method.file %} <a href="{{method.file}}">BIJLAGE</a>{% endif %}</li>
+	{% endfor %}
+	</ul>
+    
+{% endblock infocontent %}

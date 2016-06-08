@@ -1,0 +1,30 @@
+{% extends "@application/base.html" %}
+
+{% block applicationframe %}
+    <div class="content-wrapper info">
+        <div class="info-background">
+        </div>
+
+        {% include '@application/menu.html' %}
+
+        <map name="tower-info">
+            <area id="area-geloof" class="{% if management != 'Geloofenkerk' %}dark{% endif %}" shape="poly" coords="154,4,342,16,598,10,626,256,318,276,116,240" href="/geloofenkerk"/>
+            <area id="area-bezinning" class="{% if management != 'Kortebezinningsmomenten' %}dark{% endif %}" shape="poly" coords="112,256,316,292,628,276,654,502,298,542,76,474" href="/kortebezinningsmomenten" />
+            <area id="area-waarden" class="{% if management != 'Waardeninksa' %}dark{% endif %}"  shape="poly" coords="74,490,296,558,658,522,682,744,274,808,38,692" href="/waardeninksa" />
+            <area id="area-activiteiten" class="{% if management != 'Ksaactiviteiten' %}dark{% endif %}" shape="poly" coords="36,710,276,824,684,760,712,986,252,1082,2,902" href="/ksaactiviteiten" />
+        </map>
+
+        <img id="tower-info" usemap="#tower-info" src="/managements/home/resources/images/tower.png" />
+
+        <div class="info-content">
+        	<div class="info-content-scroll">
+    	    	{% block infocontent %}
+    	    	    
+    	    	{% endblock infocontent %}
+        	</div>
+        </div>
+
+        {% include '@application/overview.html' %}
+    </div>
+    
+{% endblock applicationframe %}

@@ -1,0 +1,76 @@
+{% extends "@application/info.html" %}
+
+{% block infocontent %}
+	<h2>Pagadders 8-10 jaar</h2>
+	<h4>De kernwoorden volgens de leeftijdsbalk</h4>
+	<div class="table-container">
+	<table class="col-3 kernwoorden-leeftijd">
+		<tr>
+			<td>
+				Houding t.o.v. leefwereld
+			</td>
+			<td>
+				nieuwsgierigheid
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Interesse
+			</td>
+			<td>
+				regelspelen
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Motivatie voor KSA
+			</td>
+			<td>
+				samen spelen
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Groeien in initiatief
+			</td>
+			<td>
+				uitproberen
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Identiteitsontwikkeling
+			</td>
+			<td>
+				leren van elkaar
+			</td>
+		</tr>
+	</table>
+</div>
+	<p>
+		In tegenstelling tot de Kabouters kan je met de Pagadders wat dieper ingaan op de boodschap van de Bijbelverhalen. Zelf zijn ze reeds een beetje in staat om na te denken over hoe ze kunnen leven naar het voorbeeld van Jezus. Toch blijft het ook nog veel ‘nadoen’.
+	</p>
+	<p>
+		Sommige Pagadders echter zullen af en toe wel eens een kritische noot laten vallen door te zeggen dat de verhalen ‘fantasie’ zijn. Het heeft weinig zin om die kritiek te negeren of weg te duwen. Probeer te duiden dat wat in de Bijbelverhalen neergeschreven staat, inderdaad een droom is die best werkelijkheid wordt.
+	</p>
+	<p>
+		In een viering laten we de Pagadders best iets doen. Toch is het ook belangrijk hen te leren om stil te zijn en tot gebed te komen.
+	</p>
+	<h4>Kernwoorden rond de K</h4>
+	<div class="table-container">
+	<table class="col-3 kernwoorden-k">
+		<tr>
+			<td>+/- letterlijk geloof</td>
+			<td>bijbelverhaal uitbeelden</td>
+			<td>opstapjes voor stilte en gebed</td>
+		</tr>
+	</table>
+	</div>
+	<h4>Methodieken en tips</h4>
+	<ul>
+	{% for method in methods %}
+	<li>{{method.name}}{% if method.file %} <a href="{{method.file}}">BIJLAGE</a>{% endif %}</li>
+	{% endfor %}
+	</ul>
+    
+{% endblock infocontent %}

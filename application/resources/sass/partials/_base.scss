@@ -1,0 +1,324 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    background-image: url(/application/resources/images/background.png);
+}
+
+h2 {
+	font-family: "blue-highway";
+	margin-top: 0;
+}
+
+h3 {
+	font-weight: bold;
+	font-style: italic;
+}
+
+h4 {
+	font-weight: bold;
+	font-style: italic;
+}
+
+.application-frame {
+	top: 50%;
+	margin: 0 auto;
+	margin-top: -($frame-height/2);
+
+	width: $frame-width + (2 * $frame-border);
+	height: $frame-height  + (2 * $frame-border);
+	position: relative;
+	overflow: hidden;
+
+	border: $frame-border solid;
+	border-top-color: $tower-dark;
+	border-left-color: $tower-light;
+	border-right-color: $tower-light;
+	border-bottom-color: $tower-dark;
+}
+
+#site-overview-wrapper {
+	width: $overview-width;
+	height: $overview-height;
+	position: absolute;
+	left: $frame-width - $overview-pull-width;
+	margin-top: ($frame-height - $overview-height)/2;
+	clear: both;
+	z-index: 1000;
+
+	& > div, & > a {
+		height: 100%;
+		float: left;
+	}
+
+	#site-overview-pull {
+		display: block;
+		width: $overview-pull-width;
+		@include border-radius(10px 0 0 10px);
+		@include background-image(linear-gradient(to right, $pull-left, $pull-right));
+		color: $pull-color;
+		font-style: uppercase;
+		font-size: 18px;
+		font-weight: bold;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: none;
+		}
+
+		& > span:first-child {
+			position: relative;
+			left: 10px;
+			top: 10px;
+		}
+
+		#overview-pull-text {
+			display: block;
+			@include transform(rotate(-90deg));
+			@include transform-origin(85px 80px);
+			left: -300px;
+			width: 250px;
+		}
+	}
+
+	#site-overview-container {
+		width: $overview-container-width;
+		background: $overview-background;
+		padding: 12px 0;
+
+		.ban-image {
+			position: absolute;
+			top: -70px;
+
+			&:nth-child(1) {
+				left: ($overview-container-inner-width / 6) - ($overview-container-inner-width / 12) ;
+			}
+
+			&:nth-child(2) {
+				left: ((($overview-container-inner-width / 6)) * 2) - ($overview-container-inner-width / 12);
+			}
+
+			&:nth-child(3) {
+				left: ((($overview-container-inner-width / 6)) * 3) - ($overview-container-inner-width / 12);
+			}
+
+			&:nth-child(4) {
+				left: ((($overview-container-inner-width / 6)) * 4) - ($overview-container-inner-width / 12);
+			}
+
+
+			&:nth-child(5) {
+				left: ((($overview-container-inner-width / 6)) * 5) - ($overview-container-inner-width / 12);
+			}
+
+			&:nth-child(6) {
+				left: ((($overview-container-inner-width / 6)) * 6) - ($overview-container-inner-width / 12);
+			}
+		}
+	}
+}
+
+.floor-container {
+
+	.floor {
+		background: $floor-background;
+		width: 100%;
+		height: $floor-height;
+		margin-bottom: $floor-margin / 3;
+		padding: $floor-row-padding;
+	}
+
+	.floor-row {
+		height: $floor-row-height;
+		margin-bottom: $floor-row-padding;
+	}
+
+	.floor-item {
+		position: relative;
+		display: block;
+		float: left;
+		margin-right: $floor-row-padding;
+		margin-bottom: $floor-row-padding;
+		text-align: center;
+		color: white;
+		font-weight: bold;
+		padding: 4px 0;
+		font-size: 13px;
+		font-family: "blue-highway";
+		font-style: italic;
+		text-transform: uppercase;
+
+		a {
+			display: block;
+			position: absolute;
+			height: 26px;
+			width: 100%;
+			top: 0;
+			left: 0;
+		}
+
+		&.yellow {
+			background-color: $yellow;
+		}
+
+		&.orange {
+			background-color: $orange;
+		}
+
+		&.red {
+			background-color: $red;
+		}
+
+		&.purple {
+			background-color: $purple;
+		}
+
+		&.blue {
+			background-color: $blue;
+		}
+
+		&.brown {
+			background-color: $brown;
+		}
+
+		&.yellow-orange {
+			@include background-image(linear-gradient(to right, $yellow, $orange));
+		}
+
+		&.orange-red {
+			@include background-image(linear-gradient(to right, $orange, $red));
+		}
+
+		&.red-purple {
+			@include background-image(linear-gradient(to right, $red, $purple));
+		}
+
+		&.purple-blue {
+			@include background-image(linear-gradient(to right, $purple, $blue));
+		}
+
+		&.blue-brown {
+			@include background-image(linear-gradient(to right, $blue, $brown));
+		}
+
+		&.yellow-orange-red {
+			@include background-image(linear-gradient(to right, $yellow, $orange, $red));
+		}
+
+		&.orange-red-purple {
+			@include background-image(linear-gradient(to right, $orange, $red, $purple));
+		}
+
+		&.red-purple-blue {
+			@include background-image(linear-gradient(to right, $red, $purple, $blue));
+		}
+
+		&.yellow-orange-red-purple {
+			@include background-image(linear-gradient(to right, $yellow, $orange, $red, $purple));
+		}
+
+		&.red-purple-blue-brown {
+			@include background-image(linear-gradient(to right, $red, $purple, $blue, $brown));
+		}
+
+		&.orange-red-purple-blue-brown {
+			@include background-image(linear-gradient(to right, $orange, $red, $purple, $blue, $brown));
+		}
+
+		&.width-1 {
+			width: ($overview-container-inner-width / 6) - $floor-row-padding; 
+		}
+
+		&.width-2 {
+			width: ($overview-container-inner-width / 3) - $floor-row-padding; 
+
+			a {
+				width: 50%;
+			}
+
+			a:nth-child(2) {
+				left: (($overview-container-inner-width / 3) - $floor-row-padding) / 2;
+			}
+		}
+
+		&.width-3 {
+			width: ($overview-container-inner-width / 2) - $floor-row-padding; 
+
+			a {
+				width: 33%;
+			}
+
+			a:nth-child(2) {
+				left: (($overview-container-inner-width / 2) - $floor-row-padding) / 3;
+			}
+
+			a:nth-child(3) {
+				left: (($overview-container-inner-width / 2) - $floor-row-padding) * 2 / 3;
+			}
+		}
+
+		&.width-4 {
+			width: ($overview-container-inner-width * 2 / 3) - $floor-row-padding; 
+
+			a {
+				width: 25%;
+			}
+
+			a:nth-child(2) {
+				left: (($overview-container-inner-width * 2 / 3) - $floor-row-padding) / 4;
+			}
+
+			a:nth-child(3) {
+				left: (($overview-container-inner-width * 2 / 3) - $floor-row-padding) / 2;
+			}
+
+			a:nth-child(4) {
+				left: (($overview-container-inner-width * 2 / 3) - $floor-row-padding) * 3 / 4;
+			}
+		}
+
+		&.width-5 {
+			width: ($overview-container-inner-width * 5 / 6) - $floor-row-padding; 
+
+			a:nth-child(2) {
+				left: (($overview-container-inner-width * 5 / 6) - $floor-row-padding) / 5;
+			}
+
+			a:nth-child(3) {
+				left: (($overview-container-inner-width * 5 / 6) - $floor-row-padding) * 2 / 5;
+			}
+
+			a:nth-child(4) {
+				left: (($overview-container-inner-width * 5 / 6) - $floor-row-padding) * 3 / 5;
+			}
+
+			a:nth-child(5) {
+				left: (($overview-container-inner-width * 5 / 6) - $floor-row-padding) * 4 / 5;
+			}
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.popover {
+	color: #000000;
+	text-align: center;
+	text-transform: none;
+	font-style: none;
+}
+
+.credits {
+	position: absolute;
+	top: 50%;
+	margin-top: ($frame-height/2) + $default-size + (2*$frame-border);
+	margin-bottom: $default-size;
+	z-index: 10000;
+	font-size: 14px;
+	font-weight: bold;
+	font-family: "blue-highway";
+	color: $tower-dark;
+	text-align: center;
+	width: 100%;
+}

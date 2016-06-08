@@ -1,0 +1,16 @@
+{% extends '@application/base.html' %}
+
+{% block applicationframe %}
+
+    <div class="content-wrapper geloofenkerk">
+
+        {% include '@application/menu.html' %}
+        
+        <div id="tower-wrapper">
+            <img class="background" usemap="#background" src="/managements/kortebezinningsmomenten/resources/images/background.png" />
+        </div>
+
+        {% include '@application/overview.html' %}
+
+    </div>
+{% endblock applicationframe %}

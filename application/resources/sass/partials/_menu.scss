@@ -1,0 +1,82 @@
+#menu-container {
+	position: absolute;
+	z-index: 900;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: $menu-height;
+
+	.menu-container-item {
+		float: left;
+		padding: $default-size;
+		height: 100%;
+	}
+
+	.left {
+		text-align: left;
+		width: $logo-width
+	}
+
+	.center {
+		width: $frame-width - $logo-width - $logo-nzg-width;
+	}
+
+	.right {
+		text-align: right;
+		width: $logo-nzg-width;
+	}
+}
+
+#logo-wrapper {
+	display: block;
+
+	&:hover, &:active, &:focus {
+		text-decoration: none;
+	}
+}
+
+#logo {
+	display: block;
+	font-family: "blue-highway";
+	color: $blue-title;
+	font-size: 70px;
+	margin-top: 0;
+
+	span {
+		color: white;
+		font-size: 50px;
+	}
+}
+
+#logo-nzg {
+	width: 100%;
+}
+
+.menu {
+	display: block;
+	margin: $menu-margin auto;
+	height: $menu-item-height;
+
+	ul {
+		height: 100%;
+
+		li {
+			float: left;
+			margin-right: $default-size;
+
+			a {
+				display: block;
+				@include border-radius(5px);
+				background-color: $menu-background;
+				color: white;
+				font-size: 13px;
+				font-weight: bold;
+				padding: $menu-padding;
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}

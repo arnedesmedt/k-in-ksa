@@ -1,0 +1,70 @@
+{% extends "@application/info.html" %}
+
+{% block infocontent %}
+	<h2>Kabouter 6-8 jaar</h2>
+	<h4>De kernwoorden volgens de leeftijdsbalk</h4>
+	<div class="table-container">
+	<table class="col-3 kernwoorden-leeftijd">
+		<tr>
+			<td>
+				Houding t.o.v. leefwereld
+			</td>
+			<td>
+				verwondering
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Interesse
+			</td>
+			<td>
+				fantasie
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Motivatie voor KSA
+			</td>
+			<td>
+				spelen
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Groeien in initiatief
+			</td>
+			<td>
+				afhankelijkheid
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Identiteitsontwikkeling
+			</td>
+			<td>
+				thuis
+			</td>
+		</tr>
+	</table>
+</div>
+	<p>
+		Net zoals op de tweede verdieping zullen we met de Kabouters heel concreet aan de slag moeten gaan. Moeilijke woorden en abstracte begrippen gebruik je niet. Beter is om in te zoemen op concrete situaties en gebruik te maken van concreet beeldmateriaal waarin de Kabouters zich kunnen herkennen.
+	</p>
+	<h4>Kernwoorden rond de K</h4>
+	<div class="table-container">
+	<table class="col-3 kernwoorden-k">
+		<tr>
+			<td>CONCREET</td>
+			<td>AFBEELDINGEN</td>
+			<td>KNUTSELEN</td>
+		</tr>
+	</table>
+	</div>
+	<h4>Methodieken en tips</h4>
+	<ul>
+	{% for method in methods %}
+	<li>{{method.name}}{% if method.file %} <a href="{{method.file}}">BIJLAGE</a>{% endif %}</li>
+	{% endfor %}
+	</ul>
+    
+{% endblock infocontent %}

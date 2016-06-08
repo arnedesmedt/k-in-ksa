@@ -1,0 +1,79 @@
+{% extends "@application/info.html" %}
+
+{% block infocontent %}
+	<h2>Hernieuwers +16 jaar</h2>
+	<h4>De kernwoorden volgens de leeftijdsbalk</h4>
+	<div class="table-container">
+	<table class="col-3 kernwoorden-leeftijd">
+		<tr>
+			<td>
+				Houding t.o.v. leefwereld
+			</td>
+			<td>
+				PLANNEN EN KEUZES MAKEN
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Interesse
+			</td>
+			<td>
+				INSPRAAK
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Motivatie voor KSA
+			</td>
+			<td>
+				GROEP
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Groeien in initiatief
+			</td>
+			<td>
+				ENGAGEMENT
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Identiteitsontwikkeling
+			</td>
+			<td>
+				EIGEN IDENTITEIT OPBOUWEN
+			</td>
+		</tr>
+	</table>
+</div>
+	<p>
+		Met Hernieuwers reflecteren over geloof is geen makkelijke klus maar wel een hele uitdaging. Vaak zijn ze heel kritisch wat de christelijke invulling van de K betreft. Ze hebben het niet zo vaak voor één visie en wensen dat er voldoende openheid is om zelf een invulling te geven aan geloof.
+	</p>
+	<p>
+		De Bijbel is daarom vaak voor hen geen boek waardoor ze zich uitgedaagd weten. Tenzij ze mee op sleeptouw worden genomen om te ontdekken dat wat in de Bijbel staat een boodschap bevat die vandaag nog kan aanspreken. Het is daarom ontzettend belangrijk om samen met hen te zoeken naar de dieperliggende betekenis van de symbolische taal die erin gebruikt wordt. 
+	</p>
+	<p>
+		Van daaruit is het mogelijk om met hen in gesprek te gaan over geloof. De Hernieuwers zullen ontdekken dat er in hun vriendengroep verschillende visies zijn op geloof. Door voldoende openheid en inlevingsvermogen aan de dag te leggen, kan er ruimte groeien voor ieders geloofsverhaal.
+	</p>
+	<p>
+		In een viering wordt wat men belangrijk vindt samengebracht en vanuit christelijk perspectief geduid. Bij Hernieuwers is het aan te raden om te vertrekken vanuit een Bijbelverhaal, luisterlied of tekst om van daaruit te komen tot bezinning en gebed.
+	</p>
+	<h4>Kernwoorden rond de K</h4>
+	<div class="table-container">
+	<table class="col-3 kernwoorden-k">
+		<tr>
+			<td>symbolisch geloof</td>
+			<td>BIJBELVERHAAL EN EIGEN GELOOFSVERHAAL DUIDEN</td>
+			<td>SAMEN VIEREN</td>
+		</tr>
+	</table>
+	</div>
+	<h4>Methodieken en tips</h4>
+	<ul>
+	{% for method in methods %}
+	<li>{{method.name}}{% if method.file %} <a href="{{method.file}}">BIJLAGE</a>{% endif %}</li>
+	{% endfor %}
+	</ul>
+    
+{% endblock infocontent %}

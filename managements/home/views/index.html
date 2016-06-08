@@ -1,0 +1,48 @@
+{% extends '@application/base.html' %}
+
+{% block applicationframe %}
+
+    <div class="background">
+        <div class="sky">
+        </div>
+        <div class="ground">        
+        </div>
+    </div>
+
+    <div class="content-wrapper home">
+
+        {% include '@application/menu.html' %}
+
+        <div id="tower-wrapper">
+            <div class="popover-container">
+                <div class="popover-scroll">
+                    <h2>Inleiding</h2>
+                    <quote>De K van KSA verwijst naar onze oorsprong maar ook naar onze zending.</quote>
+                    <p>
+                        In het begin van de twintigste eeuw is er een grote invloed van de katholieke Kerk in Europa. Er wordt beslist om een KA (= Katholieke Actie) op poten te zetten die alle lagen van de bevolking moet bereiken. Katholiek betekent immers ‘universeel’. Over de hele wereld worden niet alleen priesters en religieuzen opgeroepen om christelijk te leven, maar alle mensen van de hele wereld moeten in actie komen.
+                    </p>
+                    <p> 
+                        Priester Karel Dubois wordt gevraagd om in West-Vlaanderen een katholieke actie voor studenten te verwezenlijken. Dat wordt uiteindelijk de KSA (= Katholieke Studenten Actie). In hetzelfde spoor van de KA worden de KLJ (= Katholieke Landelijke Jeugd), de KAJ (= Katholieke Arbeidersjeugd) en de VKSJ (= Vrouwelijke Katholieke Studerende Jeugd) opgericht.
+                    </p>
+                    <p>
+                        De K in de naam van onze beweging verwijst naar deze rijke geschiedenis maar wil ons ook oproepen om vandaag de dag aandacht te blijven hebben voor het christelijk geloof. Het leven van Jezus, zijn woorden en daden, blijven ons inspireren om vorm te geven aan de waarden zoals verdraagzaamheid, eerlijkheid, rechtvaardigheid, hulpvaardigheid en solidariteit, die we in KSA belangrijk vinden. 
+                    </p>
+                    <p>
+                        In een samenleving waarin het niet meer zo vanzelfsprekend is dat iedereen christen is, willen we werk maken van onze christelijke identiteit met openheid voor de mening van anderen. Tijdens de verschillende activiteiten en initiatieven willen we de K uitdragen en af en toe halt houden en uitdrukkelijk de K ter sprake brengen in een bezinningsmoment of viering.” 
+                    </p>
+                </div>
+            </div>
+
+            <map name="tower">
+                <area id="area-geloof" shape="poly" coords="154,4,342,16,598,10,626,256,318,276,116,240" href="/geloofenkerk" title="Klik op dit verdiep om binnenin kennis te maken met 'Geloof en kerk'" />
+                <area id="area-bezinning" shape="poly" coords="112,256,316,292,628,276,654,502,298,542,76,474" href="/kortebezinningsmomenten" title="Klik op dit verdiep om binnenin kennis te maken met 'Korte bezinningsmomenten'" />
+                <area id="area-waarden" shape="poly" coords="74,490,296,558,658,522,682,744,274,808,38,692" href="/waardeninksa" title="Klik op dit verdiep om binnenin kennis te maken met 'Waarden in KSA'"/>
+                <area id="area-activiteiten" shape="poly" coords="36,710,276,824,684,760,712,986,252,1082,2,902" href="/ksaactiviteiten" title="Klik op dit verdiep om binnenin kennis te maken met 'KSA-Activiteiten'" />
+            </map>
+            <img id="tower" usemap="#tower" src="/managements/home/resources/images/tower.png" />
+        </div>
+
+        {% include '@application/overview.html' %}
+
+    </div>
+{% endblock applicationframe %}

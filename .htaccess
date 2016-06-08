@@ -1,0 +1,7 @@
+RewriteEngine On
+ 
+# RewriteCond %{REQUEST_FILENAME} !vardump.php
+# RewriteRule .* vardump.php?fn=%{REQUEST_FILENAME} [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([a-zA-Z]*)[/\\]?(.*?)[/\\]?$ /index.php?environment=$1&path=$2 [L]

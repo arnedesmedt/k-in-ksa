@@ -1,0 +1,73 @@
+{% extends "@application/info.html" %}
+
+{% block infocontent %}
+	<h2>Knapen 12-14 jaar</h2>
+	<h4>De kernwoorden volgens de leeftijdsbalk</h4>
+	<div class="table-container">
+	<table class="col-3 kernwoorden-leeftijd">
+		<tr>
+			<td>
+				Houding t.o.v. leefwereld
+			</td>
+			<td>
+				EXPERIMENTEREN
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Interesse
+			</td>
+			<td>
+				VRIJHEID EN AVONTUUR
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Motivatie voor KSA
+			</td>
+			<td>
+				VERKENNEN
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Groeien in initiatief
+			</td>
+			<td>
+				ZELFSTANDIGHEID
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Identiteitsontwikkeling
+			</td>
+			<td>
+				ZICHZELF EN DE GROEP ONTDEKKEN
+			</td>
+		</tr>
+	</table>
+</div>
+	<p>
+		De Knapen ervaren de vriendschap onder elkaar als iets heel belangrijks. Thema’s als vriendschap, diversiteit, groep vormen … zijn daarom ook heel dankbare thema’s om rond te werken. Poëzie, luisterliederen, teksten en verhalen zijn interessante ingrediënten om in een kort bezinningsmoment te verwerken. 
+	</p>
+	<p>
+		Het gebruik van eenvoudige symbolen en rituelen maakt het geheel nog rijker.
+	</p>
+	<h4>Kernwoorden rond de K</h4>
+	<div class="table-container">
+	<table class="col-3 kernwoorden-k">
+		<tr>
+			<td>EENVOUDIGE SYMBOLEN</td>
+			<td>RITUELEN</td>
+			<td>EENVOUDIG GESPREK</td>
+		</tr>
+	</table>
+	</div>
+	<h4>Methodieken en tips</h4>
+	<ul>
+	{% for method in methods %}
+	<li>{{method.name}}{% if method.file %} <a href="{{method.file}}">BIJLAGE</a>{% endif %}</li>
+	{% endfor %}
+	</ul>
+    
+{% endblock infocontent %}

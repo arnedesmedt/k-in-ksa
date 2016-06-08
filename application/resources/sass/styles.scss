@@ -1,0 +1,19 @@
+@import "compass";
+@import "compass/reset";
+@import "bootstrap-variables";
+@import "bootstrap";
+
+@import "partials/colors";
+@import "partials/dimensions";
+@import "partials/fonts";
+
+@import "partials/base";
+@import "partials/menu";
+@import "partials/info";
+
+@import "managements/home";
+@import "managements/geloofenkerk";
+@import "managements/kortebezinningsmomenten";
+@import "managements/waardeninksa";
+@import "managements/ksaactiviteiten";
+@import "managements/admin"

@@ -1,0 +1,73 @@
+{% extends "@application/info.html" %}
+
+{% block infocontent %}
+	<h2>Jonghernieuwers 14-16 jaar</h2>
+	<h4>De kernwoorden volgens de leeftijdsbalk</h4>
+	<div class="table-container">
+	<table class="col-3 kernwoorden-leeftijd">
+		<tr>
+			<td>
+				Houding t.o.v. leefwereld
+			</td>
+			<td>
+				ORGANISEREN
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Interesse
+			</td>
+			<td>
+				SAMENWERKEN
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Motivatie voor KSA
+			</td>
+			<td>
+				VRIENDEN
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Groeien in initiatief
+			</td>
+			<td>
+				VERANTWOORDELIJKHEID
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Identiteitsontwikkeling
+			</td>
+			<td>
+				KRITISCH ONDERZOEKEN
+			</td>
+		</tr>
+	</table>
+</div>
+	<p>
+		De Jonghernieuwers hebben meer en meer een eigen mening omtrent heel wat zaken. In de groep willen ze dan ook ernstig genomen worden. Bij hen is er een grote drang om er bij te horen. Daarom gebeurt het wel eens dat ze zichzelf aanpassen aan de groep i.p.v. op te komen voor hun eigenheid.
+	</p>
+	<p>
+		KSA’er zijn is een bewuste keuze. Er zijn tal van alternatieven. De grote motivatie om naar de KSA-activiteiten te blijven komen is de vriendengroep waarin ze ontzettend veel plezier beleven. 
+	</p>
+	<h4>Kernwoorden rond de K</h4>
+	<div class="table-container">
+	<table class="col-3 kernwoorden-k">
+		<tr>
+			<td>PASSIE VOOR KSA</td>
+			<td>VRIENDSCHAP</td>
+			<td>OPKOMEN VOOR JEZELF</td>
+		</tr>
+	</table>
+	</div>
+	<h4>Methodieken en tips</h4>
+	<ul>
+	{% for method in methods %}
+	<li>{{method.name}}{% if method.file %} <a href="{{method.file}}">BIJLAGE</a>{% endif %}</li>
+	{% endfor %}
+	</ul>
+    
+{% endblock infocontent %}

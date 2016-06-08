@@ -1,0 +1,79 @@
+{% extends "@application/info.html" %}
+
+{% block infocontent %}
+	<h2>Jongknapen 10-12 jaar</h2>
+	<h4>De kernwoorden volgens de leeftijdsbalk</h4>
+	<div class="table-container">
+	<table class="col-3 kernwoorden-leeftijd">
+		<tr>
+			<td>
+				Houding t.o.v. leefwereld
+			</td>
+			<td>
+				uitdagingen zoeken
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Interesse
+			</td>
+			<td>
+				competitie
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Motivatie voor KSA
+			</td>
+			<td>
+				actie en spanning
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Groeien in initiatief
+			</td>
+			<td>
+				initiatief nemen
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Identiteitsontwikkeling
+			</td>
+			<td>
+				voorbeelden
+			</td>
+		</tr>
+	</table>
+</div>
+	<p>
+		In het nadenken en spreken over geloof is het belangrijk dat de Jongknapen leren dat geloven op zich niet gemakkelijk is. Er zijn ontzettend veel vragen maar ook veel antwoorden. En net daar knelt soms het schoentje. Jongknapen wensen de duidelijkheid die ze niet kunnen krijgen.
+	</p>
+	<p>
+		De vragen die ze hebben rond een Bijbelverhaal kunnen wel beantwoord worden. Dit veronderstelt natuurlijk dat we zelf vertrouwd zijn met de betekenis van het verhaal.
+	</p>
+	<p>
+		Aan de hand van een gesprek rond geloof (eventueel vanuit een Bijbelverhaal) proberen Jongknapen stilaan te verwoorden wat ze zelf willen geloven. In de vriendengroep begint er stilaan wat openheid te groeien om ook dit delicate en persoonlijke onderwerp ter sprake te brengen.
+	</p>
+	<p>
+		In een viering wordt wat men belangrijk vindt, samengebracht en vanuit christelijk perspectief geduid.
+	</p>
+	<h4>Kernwoorden rond de K</h4>
+	<div class="table-container">
+	<table class="col-3 kernwoorden-k">
+		<tr>
+			<td>+/- letterlijk geloof</td>
+			<td>bijbelverhaal duiden</td>
+			<td>samen vieren</td>
+		</tr>
+	</table>
+	</div>
+	<h4>Methodieken en tips</h4>
+	<ul>
+	{% for method in methods %}
+	<li>{{method.name}}{% if method.file %} <a href="{{method.file}}">BIJLAGE</a>{% endif %}</li>
+	{% endfor %}
+	</ul>
+    
+{% endblock infocontent %}

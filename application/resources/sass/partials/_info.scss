@@ -1,0 +1,107 @@
+.info-background {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	@include background-image(linear-gradient(to bottom, $sky-top, $sky-bottom));
+	z-index: 1;
+}
+
+#tower-info {
+	width: $tower-img-width;
+	position: absolute;
+	margin-left: ($frame-width - ($tower-img-width*$tower-width-percentage))/2;
+	margin-top: (($frame-height - ($tower-img-height*$tower-height-percentage))/2) + 75px;
+	left: -((($frame-width - ($tower-img-width*$tower-width-percentage))/2) + ($tower-img-width * $tower-width-side-percentage));
+	z-index: 2;
+}
+
+.dark {
+	background-color: $popover-background;
+}
+
+.info-content {
+	position: absolute;
+	width: ($frame-width - (($tower-img-width * (1-$tower-width-side-percentage)) - ($tower-img-width * (1-$tower-width-percentage)))) * 0.95;
+	height: $frame-height - ($menu-height + 50px);
+	margin-left: ($tower-img-width * (1-$tower-width-side-percentage)) - ($tower-img-width * (1-$tower-width-percentage));
+	margin-top: $menu-height + 50px;
+	z-index: 2;
+	padding: $default-size;
+
+	.info-content-scroll {
+		position: relative;
+		padding: $default-size;
+		height: $frame-height - ($menu-height + 50px) - (2 * $default-size);
+		overflow-y: auto;
+
+		h2, h3 {
+			color: white;
+		}
+
+		p {
+			font-weight: bold;
+		}
+
+		ul {
+			margin-left: 20px;
+
+			li {
+				list-style: circle;
+				font-weight: bold;
+				margin-bottom: 5px;
+			}
+		}
+
+		.table-container {
+			background: $popover-background;
+			padding: $default-size;
+			width: 100%;
+			margin-bottom: $default-size;
+			color: white;
+
+			table {
+				width: 100%;
+				border-collapse: collapse;
+
+				&.kernwoorden-leeftijd td:last-child, &.kernwoorden-k td {
+					text-transform: uppercase;
+				} 
+
+				&.col-2 {
+					td {
+						width: 50%;
+						padding: 2px;
+					}
+				}
+
+				&.col-3 {
+					td {
+						width: 33%;
+					}
+				}
+				
+				td {
+					border: 2px solid #FFFFFF;
+					text-align: center;
+					padding: 2px;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}
+
+.info {
+	#site-overview-wrapper {
+		margin-top: (($frame-height - ($tower-img-height*$tower-height-percentage))/2) + 75px;
+	}
+}
+
+.k {
+	font-size: 18px;
+}
+
+.ondertitel {
+	color: white;
+	font-size: 12px;
+}

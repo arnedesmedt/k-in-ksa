@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta charset="UTF-8" />
+        {% if mobile %}
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% endif %}
+        <title>{% block title %}{% endblock title %}</title>
+
+        {% block stylesheets %}
+            {% for stylesheet in stylesheets %}
+                <link rel="stylesheet" type="text/css" href="{{ stylesheet }}" />
+            {% endfor %}
+        {% endblock stylesheets %}
+
+        {% if favicon is defined %}
+            <link rel="icon" type="image/{{ favicon.type }}" href="{{ favicon.name }}" />
+        {% endif %}
+
+        {% block headscripts %}
+            {% for headscript in headscripts %}
+                <script type="text/javascript" src="{{ headscript }}"></script>
+            {% endfor %}
+        {% endblock headscripts %}
+   </head>
+    <body>
+        {% block body %}
+
+        {% endblock body %}
+
+        {% block bodyscripts %}
+            {% for bodyscript in bodyscripts %}
+                <script type="text/javascript" src="{{ bodyscript }}"></script>
+            {% endfor %}
+        {% endblock bodyscripts %}
+
+        {% block handlebars_templates %}
+            {% for handlebars_template in handlebars_templates %}
+                {{ handlebars_template|raw }}
+            {% endfor %}
+        {% endblock handlebars_templates %}
+    </body>
+</html>

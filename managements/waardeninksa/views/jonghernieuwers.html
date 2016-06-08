@@ -1,0 +1,73 @@
+{% extends "@application/info.html" %}
+
+{% block infocontent %}
+	<h2>Jonghernieuwers 14-16 jaar</h2>
+	<h4>De kernwoorden volgens de leeftijdsbalk</h4>
+	<div class="table-container">
+	<table class="col-3 kernwoorden-leeftijd">
+		<tr>
+			<td>
+				Houding t.o.v. leefwereld
+			</td>
+			<td>
+				ORGANISEREN
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Interesse
+			</td>
+			<td>
+				SAMENWERKEN
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Motivatie voor KSA
+			</td>
+			<td>
+				VRIENDEN
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Groeien in initiatief
+			</td>
+			<td>
+				VERANTWOORDELIJKHEID
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Identiteitsontwikkeling
+			</td>
+			<td>
+				KRITISCH ONDERZOEKEN
+			</td>
+		</tr>
+	</table>
+</div>
+	<p>
+		De meeste Jonghernieuwers hebben zich een mening gevormd rond heel wat zaken. Of ze er ook willen voor uit komen is een andere kwestie. De groepsdruk speelt hen soms parten. Toch is het mogelijk om met Jonghernieuwers dieper in te gaan op wat ze echt belangrijk vinden. En leren ze ook om te gaan met de aanwezige diversiteit binnen de groep. 
+	</p>
+	<p>
+		Meer en meer ontwikkelen ze een eigen identiteit die vorm gegeven wordt vanuit datgene wat ze zelf belangrijk vinden. Wie ze zijn en willen worden, bepaalt heel sterk hun levenssfeer.
+	</p>
+	<h4>Kernwoorden rond de K</h4>
+	<div class="table-container">
+	<table class="col-3 kernwoorden-k">
+		<tr>
+			<td>WAARDEN KIEZEN</td>
+			<td>ACTIE</td>
+			<td>IDENTITEIT</td>
+		</tr>
+	</table>
+	</div>
+	<h4>Methodieken en tips</h4>
+	<ul>
+	{% for method in methods %}
+	<li>{{method.name}}{% if method.file %} <a href="{{method.file}}">BIJLAGE</a>{% endif %}</li>
+	{% endfor %}
+	</ul>
+    
+{% endblock infocontent %}

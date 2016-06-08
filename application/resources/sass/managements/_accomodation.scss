@@ -1,0 +1,10 @@
+.accomodation-picture {
+    
+    img {
+        border: 5px solid white;
+        width: 100%;
+        @include box-shadow(black 0px 0px 2px);
+    }
+
+    margin-bottom: 10px;
+}

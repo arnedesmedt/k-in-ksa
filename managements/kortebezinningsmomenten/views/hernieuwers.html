@@ -1,0 +1,76 @@
+{% extends "@application/info.html" %}
+
+{% block infocontent %}
+	<h2>Hernieuwers +16 jaar</h2>
+	<h4>De kernwoorden volgens de leeftijdsbalk</h4>
+	<div class="table-container">
+	<table class="col-3 kernwoorden-leeftijd">
+		<tr>
+			<td>
+				Houding t.o.v. leefwereld
+			</td>
+			<td>
+				PLANNEN EN KEUZES MAKEN
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Interesse
+			</td>
+			<td>
+				INSPRAAK
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Motivatie voor KSA
+			</td>
+			<td>
+				GROEP
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Groeien in initiatief
+			</td>
+			<td>
+				ENGAGEMENT
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Identiteitsontwikkeling
+			</td>
+			<td>
+				EIGEN IDENTITEIT OPBOUWEN
+			</td>
+		</tr>
+	</table>
+</div>
+	<p>
+		De Hernieuwers hebben een eigen mening gevormd maar kunnen ook al beter luisteren naar de mening van  anderen. Meer en meer leren ze omgaan met de diversiteit in de groep. Af en toe hebben ze nog een duwtje in de rug nodig om te durven uitkomen voor hun eigen mening.
+	</p>
+	<p>
+		Sommige Hernieuwers hebben het verlangen om in de korte bezinningsmomenten stil te staan bij wat ze belangrijk vinden. Door middel van muziek, tekst, beeld, rituelen … proberen ze dit uit te drukken.
+	</p>
+	<p>
+		Hernieuwers zouden in staat moeten kunnen zijn om diepgaande gesprekken te voeren over soms moeilijke thema’s (verantwoordelijkheid nemen, voorbeeldfunctie, liefde, geloven, betere wereld …).
+	</p>
+	<h4>Kernwoorden rond de K</h4>
+	<div class="table-container">
+	<table class="col-3 kernwoorden-k">
+		<tr>
+			<td>OPENHEID DURVEN</td>
+			<td>RITUELEN</td>
+			<td>DIEPGAAND GESPREK</td>
+		</tr>
+	</table>
+	</div>
+	<h4>Methodieken en tips</h4>
+	<ul>
+	{% for method in methods %}
+	<li>{{method.name}}{% if method.file %} <a href="{{method.file}}">BIJLAGE</a>{% endif %}</li>
+	{% endfor %}
+	</ul>
+    
+{% endblock infocontent %}

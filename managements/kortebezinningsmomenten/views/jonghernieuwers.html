@@ -1,0 +1,76 @@
+{% extends "@application/info.html" %}
+
+{% block infocontent %}
+	<h2>Jonghernieuwers 14-16 jaar</h2>
+	<h4>De kernwoorden volgens de leeftijdsbalk</h4>
+	<div class="table-container">
+	<table class="col-3 kernwoorden-leeftijd">
+		<tr>
+			<td>
+				Houding t.o.v. leefwereld
+			</td>
+			<td>
+				ORGANISEREN
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Interesse
+			</td>
+			<td>
+				SAMENWERKEN
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Motivatie voor KSA
+			</td>
+			<td>
+				VRIENDEN
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Groeien in initiatief
+			</td>
+			<td>
+				VERANTWOORDELIJKHEID
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Identiteitsontwikkeling
+			</td>
+			<td>
+				KRITISCH ONDERZOEKEN
+			</td>
+		</tr>
+	</table>
+</div>
+	<p>
+		De Jonghernieuwers staan vrij kritisch t.o.v. alles wat met zingeving te maken heeft. Om voldoende openheid te creëren zal het belangrijk zijn dat wat aangebracht wordt, goed vertaald kan worden naar hun eigen leven. Jonghernieuwers hebben de leeftijd bereikt waarop het mogelijk is om te reflecteren over zichzelf of over de dingen die hen interesseren.
+	</p>
+	<p>
+		De Jonghernieuwers babbelen heel vaak met elkaar over koetjes en kalfjes. Probeer bij hen ook af en toe eens tot een open gesprek te komen over datgene wat zij belangrijk vinden of vragen rond hebben.
+	</p>
+	<p>
+		Rituelen kunnen in dit geheel ook hun plaats hebben. Probeer echter wel vooraf voldoende in te schatten of ze dit zullen waarderen.
+	</p>
+	<h4>Kernwoorden rond de K</h4>
+	<div class="table-container">
+	<table class="col-3 kernwoorden-k">
+		<tr>
+			<td>eigen leven</td>
+			<td>RITUELEN</td>
+			<td>OPEN GESPREK</td>
+		</tr>
+	</table>
+	</div>
+	<h4>Methodieken en tips</h4>
+	<ul>
+	{% for method in methods %}
+	<li>{{method.name}}{% if method.file %} <a href="{{method.file}}">BIJLAGE</a>{% endif %}</li>
+	{% endfor %}
+	</ul>
+    
+{% endblock infocontent %}

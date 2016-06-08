@@ -1,0 +1,39 @@
+{% extends '@application/base.html' %}
+
+{% block applicationframe %}
+
+    <div class="background admin-background">
+
+    </div>
+
+    <div class="content-wrapper admin">
+        <h2>edit:</h2>
+        <a href="/admin/index/{{method.verdiep}}/{{method.ban}}">Overzicht verdiep en ban</a><br/><br/>
+        <form enctype="multipart/form-data" action="/admin/save" method="post">
+            <label>Verdiep</label><br/>
+            <select name="verdiep">
+                <option value="geloofenkerk" {% if method.verdiep == "geloofenkerk" %}selected="selected"{% endif %}>Geloof en kerk</option>
+                <option value="kortebezinningsmomenten" {% if method.verdiep == "kortebezinningsmomenten" %}selected="selected"{% endif %}>Korte bezinningsmomenten</option>
+                <option value="waardeninksa" {% if method.verdiep == "waardeninksa" %}selected="selected"{% endif %}>Waarden in KSA</option>
+                <option value="ksaactiviteiten" {% if method.verdiep == "ksaactiviteiten" %}selected="selected"{% endif %}>KSA-activiteiten</option>
+            </select><br/><br/>
+            <label>Ban</label><br/>
+            <select name="ban">
+                <option value="kabouters" {% if method.ban == "kabouters" %}selected="selected"{% endif %}>Kabouters</option>
+                <option value="pagadders" {% if method.ban == "pagadders" %}selected="selected"{% endif %}>Pagadders</option>
+                <option value="jongknapen" {% if method.ban == "jongknapen" %}selected="selected"{% endif %}>Jongknapen</option>
+                <option value="knapen" {% if method.ban == "knapen" %}selected="selected"{% endif %}>Knapen</option>
+                <option value="jonghernieuwers" {% if method.ban == "jonghernieuwers" %}selected="selected"{% endif %}>Jonghernieuwers</option>
+                <option value="hernieuwers" {% if method.ban == "hernieuwers" %}selected="selected"{% endif %}>Hernieuwers</option>
+            </select><br/><br/>
+            <label>Tekst</label><br/>
+            <textarea  name="name">{{method.name}}</textarea><br/><br/>
+            <label>Volgorde</label><br/>
+            <input type="text" name="volgorde" value="{{method.volgorde}}" /><br/><br/>
+            <label>Bestand</label><br/>
+            <input type="file" name="file" /><br/>
+            <input type="hidden" name="id" value="{{method.id}}">
+            <input type="submit" name="submit" value="Opslaan">
+        </form>
+    </div>
+{% endblock applicationframe %}

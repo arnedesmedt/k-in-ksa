@@ -1,0 +1,16 @@
+{% extends '@application/base.html' %}
+
+{% block applicationframe %}
+
+    <div class="background admin-background">
+
+    </div>
+
+    <div class="content-wrapper admin">
+        <form action="/admin/index" method="post">
+            <label>wachtwoord</label><br/>
+            <input type="password" name="password" /><br/><br/>
+            <input type="submit" name="submit" value="login">
+        </form>
+    </div>
+{% endblock applicationframe %}

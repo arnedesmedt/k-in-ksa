@@ -1,0 +1,73 @@
+{% extends "@application/info.html" %}
+
+{% block infocontent %}
+	<h2>Pagadders 8-10 jaar</h2>
+	<h4>De kernwoorden volgens de leeftijdsbalk</h4>
+	<div class="table-container">
+	<table class="col-3 kernwoorden-leeftijd">
+		<tr>
+			<td>
+				Houding t.o.v. leefwereld
+			</td>
+			<td>
+				nieuwsgierigheid
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Interesse
+			</td>
+			<td>
+				regelspelen
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Motivatie voor KSA
+			</td>
+			<td>
+				samen spelen
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Groeien in initiatief
+			</td>
+			<td>
+				uitproberen
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Identiteitsontwikkeling
+			</td>
+			<td>
+				leren van elkaar
+			</td>
+		</tr>
+	</table>
+</div>
+	<p>
+		De Pagadders zullen meer vanuit een zekere nieuwsgierigheid dan uit verwondering vragen stellen. Op die manier proberen ze te onderscheiden wat fantasie is en wat echt is. Net zoals bij de Kabouters blijven ook hier de vragen belangrijker dan de antwoorden. In een gesprek hoeven we dus m.a.w. niet op elke vraag een antwoord te hebben. 
+	</p>
+	<p>
+		De Pagadders houden van een spel met een uitdaging. Het tegen elkaar opnemen in een bos- of pleinspel behoort bij de favorieten. Aangezien Pagadders bruisen van energie, zijn ze vaak ook impulsief. ‘Tegen je verlies kunnen’, moet daarom ook geleerd worden. 
+	</p>
+	<h4>Kernwoorden rond de K</h4>
+	<div class="table-container">
+	<table class="col-3 kernwoorden-k">
+		<tr>
+			<td>GROEP VORMEN</td>
+			<td>VRIENDSCHAP</td>
+			<td>SAMEN SPELEN</td>
+		</tr>
+	</table>
+	</div>
+	<h4>Methodieken en tips</h4>
+	<ul>
+	{% for method in methods %}
+	<li>{{method.name}}{% if method.file %} <a href="{{method.file}}">BIJLAGE</a>{% endif %}</li>
+	{% endfor %}
+	</ul>
+    
+{% endblock infocontent %}

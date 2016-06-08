@@ -1,0 +1,73 @@
+{% extends "@application/info.html" %}
+
+{% block infocontent %}
+	<h2>Hernieuwers +16 jaar</h2>
+	<h4>De kernwoorden volgens de leeftijdsbalk</h4>
+	<div class="table-container">
+	<table class="col-3 kernwoorden-leeftijd">
+		<tr>
+			<td>
+				Houding t.o.v. leefwereld
+			</td>
+			<td>
+				PLANNEN EN KEUZES MAKEN
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Interesse
+			</td>
+			<td>
+				INSPRAAK
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Motivatie voor KSA
+			</td>
+			<td>
+				GROEP
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Groeien in initiatief
+			</td>
+			<td>
+				ENGAGEMENT
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Identiteitsontwikkeling
+			</td>
+			<td>
+				EIGEN IDENTITEIT OPBOUWEN
+			</td>
+		</tr>
+	</table>
+</div>
+	<p>
+		Vanuit de passie voor KSA groeit het verlangen om zelf leiding te geven. Samen met andere leeftijdsgenoten wordt er gebouwd aan een stevige ploeg en groep.
+	</p>
+	<p>
+		De Hernieuwers engageren zich om het beste van zichzelf te geven door de eigen talenten in te zetten. Ze leren gaandeweg ook omgaan met de diversiteit in de groep. Onder het motto ‘samen staan we sterk’ worden de schouders gezet onder het vormgeven van een goede bond.
+	</p>
+	<h4>Kernwoorden rond de K</h4>
+	<div class="table-container">
+	<table class="col-3 kernwoorden-k">
+		<tr>
+			<td>SAMENWERKEN</td>
+			<td>VRIENDSCHAP</td>
+			<td>DIVERSITEIT</td>
+		</tr>
+	</table>
+	</div>
+	<h4>Methodieken en tips</h4>
+	<ul>
+	{% for method in methods %}
+	<li>{{method.name}}{% if method.file %} <a href="{{method.file}}">BIJLAGE</a>{% endif %}</li>
+	{% endfor %}
+	</ul>
+    
+{% endblock infocontent %}

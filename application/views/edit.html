@@ -1,0 +1,7 @@
+{% extends '@application/base.html' %}
+
+{% block content %}
+    {% for form in forms %}
+        {{ form.render }}
+    {% endfor %}
+{% endblock content %}

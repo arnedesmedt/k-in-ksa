@@ -1,0 +1,73 @@
+{% extends "@application/info.html" %}
+
+{% block infocontent %}
+	<h2>Kabouter 6-8 jaar</h2>
+	<h4>De kernwoorden volgens de leeftijdsbalk</h4>
+	<div class="table-container">
+	<table class="col-3 kernwoorden-leeftijd">
+		<tr>
+			<td>
+				Houding t.o.v. leefwereld
+			</td>
+			<td>
+				verwondering
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Interesse
+			</td>
+			<td>
+				fantasie
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Motivatie voor KSA
+			</td>
+			<td>
+				spelen
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Groeien in initiatief
+			</td>
+			<td>
+				afhankelijkheid
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Identiteitsontwikkeling
+			</td>
+			<td>
+				thuis
+			</td>
+		</tr>
+	</table>
+</div>
+	<p>
+		De Kabouters zijn nog vaak oprecht verwonderd over wat ze zien en beleven. Daardoor stellen ze zich heel wat vragen. Dit kan soms vervelend zijn omdat je als leiding niet altijd een antwoord op zak hebt. Maar dat hoeft ook niet. De vragen zijn belangrijker dan de antwoorden! 
+	</p>
+	<p>
+		De Kabouters hebben heel wat verhalen te vertellen. Het zal belangrijk zijn om hen te laten vertellen, maar ook om af en toe wat stilte en rust te vragen. Op die manier leren ze ook rekening te houden met het verhaal van iemand anders.
+	</p>
+	<h4>Kernwoorden rond de K</h4>
+	<div class="table-container">
+	<table class="col-3 kernwoorden-k">
+		<tr>
+			<td>VERTELLEN</td>
+			<td>ONTDEKKEN</td>
+			<td>LUISTEREN</td>
+		</tr>
+	</table>
+	</div>
+	<h4>Methodieken en tips</h4>
+	<ul>
+	{% for method in methods %}
+	<li>{{method.name}}{% if method.file %} <a href="{{method.file}}">BIJLAGE</a>{% endif %}</li>
+	{% endfor %}
+	</ul>
+    
+{% endblock infocontent %}

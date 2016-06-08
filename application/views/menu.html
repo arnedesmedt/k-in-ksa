@@ -1,0 +1,29 @@
+<div id="menu-container">
+	<div class="menu-container-item left">
+		<a id="logo-wrapper" href="/" title="Ga terug naar de home pagina">
+			<h1 id="logo">
+		    	K <span>in</span> KSA
+			</h1>
+		</a>
+	</div>
+	<div class="menu-container-item center">
+		<nav role="navigation" class="menu">
+			<ul>
+				{% for menuitem in menu %}
+					<li>
+						<a href="{{ menuitem.url }}">{{ menuitem.title }}</a>
+					</li>
+				{% endfor %}
+				<li style="clear: both"></li>
+			</ul>
+		</nav>
+	</div>
+	<div class="menu-container-item right">
+		<img id="logo-nzg" src="/managements/home/resources/images/logo_nzg.png" />
+	</div>
+</div>
+
+
+
+
+
