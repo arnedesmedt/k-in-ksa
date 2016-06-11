@@ -87,7 +87,7 @@ class AdminController extends Application_Controller
                 '{$_POST['file']}'
             )";
         } else {
-            $file_update empty($_FILES) ? "" : ",file = '{$_POST['file']}'";
+            $file_update = empty($_FILES) ? "" : ",file = '{$_POST['file']}'";
             $query = "UPDATE method SET 
                 verdiep = '{$_POST['verdiep']}',
                 ban = '{$_POST['ban']}',
