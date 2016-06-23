@@ -72,7 +72,7 @@ class AdminController extends Application_Controller
             $_POST["volgorde"] = 0;
         }
 
-        if (!empty($_FILES)) {
+        if (!empty($_FILES['file']['name'])) {
             $file = '/uploads/'.date('Y-m-d_H:i:s').'_'.$_FILES['file']['name'];
             move_uploaded_file($_FILES['file']['tmp_name'], $_SERVER['DOCUMENT_ROOT'].$file);
             $_POST['file'] = $file;

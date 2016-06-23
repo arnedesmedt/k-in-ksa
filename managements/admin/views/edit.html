@@ -27,7 +27,7 @@
                 <option value="hernieuwers" {% if method.ban == "hernieuwers" %}selected="selected"{% endif %}>Hernieuwers</option>
             </select><br/><br/>
             <label>Tekst</label><br/>
-            <textarea  name="name">{{method.name}}</textarea><br/><br/>
+            <textarea  name="name" cols="100" rows="5">{{method.name}}</textarea><br/><br/>
             <label>Volgorde</label><br/>
             <input type="text" name="volgorde" value="{{method.volgorde}}" /><br/><br/>
             <label>Bestand</label><br/>
