@@ -29,8 +29,8 @@ class AdminController extends Application_Controller
 
             $this->template = "list.html";
             $this->context['verdiep'] = $this->parameters[0];
-            $this->context['ban'] = $this->parameters[1];
-            
+            $this->context['ban'] = $this->parameters[1]; 
+
             $query = "SELECT * FROM method WHERE verdiep = '{$this->parameters[0]}' AND ban = '{$this->parameters[1]}' ORDER BY volgorde, id ";
             $result = $this->database->query($query);
 
@@ -50,7 +50,7 @@ class AdminController extends Application_Controller
                 $result = $this->database->query($query);
                 $data = $this->database->result_to_array($result, "id");
                 $data = $data[$this->parameters[2]];
-                
+
             } else {
                 $data["volgorde"] = 0;
                 $data['verdiep'] = $this->parameters[0];
@@ -88,7 +88,7 @@ class AdminController extends Application_Controller
             )";
         } else {
             $file_update = empty($_FILES) ? "" : ",file = '{$_POST['file']}'";
-            $query = "UPDATE method SET 
+            $query = "UPDATE method SET
                 verdiep = '{$_POST['verdiep']}',
                 ban = '{$_POST['ban']}',
                 name = '{$_POST['name']}',
@@ -104,7 +104,7 @@ class AdminController extends Application_Controller
     public function delete()
     {
         $this->login();
-        
+
         $id = array_pop($this->parameters);
         $query = "DELETE FROM method WHERE id = {$id}";
         $this->database->query($query);
